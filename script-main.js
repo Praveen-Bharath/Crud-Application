@@ -50,7 +50,11 @@ function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
     document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
     document.getElementById("age").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("gender").value = selectedRow.cells[2].innerHTML;
+    var gender =selectedRow.cells[2].innerHTML;
+    if(gender == "Male")
+        document.getElementById("Male").checked=true;
+    else 
+        document.getElementById("Female").checked=true;
     document.getElementById("myhobby").value = selectedRow.cells[3].innerHTML;
 }
 function updateRecord(formData) {
