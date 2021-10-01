@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My CRUD
+        </title>
+        <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="crudicon.png" type="image/icon type">
+      <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h1>CRUD Operation</h1>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name :</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Age :</label>
+                        <input type="number" name="age" id="age">
+                    </div>
+                    <div>
+                        <label>Gender:</label><br><br>
+                        &ensp;<input class="gender" type="radio" id="male" name="gender" value="Male">
+                        <label for="gender">Male</label><br><br>
+                        &ensp;<input class="gender" type="radio" id="female" name="gender" value="Female">
+                        <label for="gender">Female</label><br><br>
+                    </div>
+                    <div>
+                        <label>Hobby :</label><br>
+                        <select id="myhobby" class="myhobby">
+                            <option value=""></option>
+                            <option value="Songs">Songs</option>
+                            <option value="Movies">Movies</option>
+                            <option value="Painting">Painting</option>
+                            <option value="Cricket">Cricket</option>
+                        </select>
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <div class="scrollbar">
+                <table class="list" id="List">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Hobby</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+        <script src="script-main.js"></script>
+    </body>
+</html>
