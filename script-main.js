@@ -75,18 +75,18 @@ function validate() {
         alert("Enter the Name");
         return false;
     }
+    var age1=document.getElementById("age").value;
+    if(age1<=18 || age1>100)
+    {
+        alert("Age is Mandatory (Between 18 to 100)");
+        return false;
+    }
     var e = document.getElementById("myhobby");
     var strUser = e.options[e.selectedIndex].value;
     var strUser1 = e.options[e.selectedIndex].text;
     if(strUser==0)
     {
         alert("Please select a hobby");
-    }
-    var age1=document.getElementById("age").value;
-    if(age1<=18 || age1>100)
-    {
-        alert("Age Should be Between 18 to 100");
-        return false;
     }
     return true;
 }

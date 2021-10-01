@@ -18,7 +18,7 @@
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
                         <label>Full Name :</label>
-                        <input type="text" name="fullName" id="fullName">
+                        <input type="text" name="fullName" id="fullName" pattern="[a-zA-Z,.' ']{3,}" title="Only Letters are Allowed, Min: 3 letters" required>
                     </div>
                     <div>
                         <label>Age :</label>
