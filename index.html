@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             My CRUD
         </title>
@@ -8,7 +11,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="crudicon.png" type="image/icon type">
-      <link rel="stylesheet" href="main.css">
+      <link rel="stylesheet" href="crudstyle.css">
     </head>
     <body>
         <h1>CRUD Operation</h1>
@@ -17,23 +20,23 @@
             <td>
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
-                        <label>Full Name :</label>
-                        <input type="text" name="fullName" id="fullName" pattern="[a-zA-Z,.' ']{3,}" title="Only Letters are Allowed, Min: 3 letters" required>
+                        <label>Full Name :</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
                     </div>
                     <div>
                         <label>Age :</label>
-                        <input type="number" name="age" id="age">
+                        <input type="text" name="age" id="age">
                     </div>
                     <div>
                         <label>Gender:</label><br><br>
-                        &ensp;<input class="gender" type="radio" id="Male" name="gender" value="Male">
+                        &ensp;<input type="radio" id="male" name="gender" value="Male">
                         <label for="gender">Male</label><br><br>
-                        &ensp;<input class="gender" type="radio" id="Female" name="gender" value="Female">
+                        &ensp;<input type="radio" id="female" name="gender" value="FeMale">
                         <label for="gender">Female</label><br><br>
                     </div>
                     <div>
                         <label>Hobby :</label><br>
-                        <select id="myhobby" class="myhobby">
+                        <select id="hobby1" class="hobby1">
                             <option value=""></option>
                             <option value="Songs">Songs</option>
                             <option value="Movies">Movies</option>
@@ -47,7 +50,6 @@
                 </form>
             </td>
             <td>
-                <div class="scrollbar">
                 <table class="list" id="List">
                     <thead>
                         <tr>
@@ -62,10 +64,9 @@
 
                     </tbody>
                 </table>
-                </div>
             </td>
         </tr>
     </table>
-        <script src="script-main.js"></script>
+        <script src="crudscript.js"></script>
     </body>
 </html>
