@@ -15,21 +15,19 @@ function readFormData() {
     formData["age"] = document.getElementById("age").value;
     formData["gender"] = document.querySelector('input[name="gender"]:checked').value;
     formData["myhobby"] = document.getElementById("myhobby").value;
-  /*  selectedElement = document.querySelector('.myhobby');
-    formData["myhobby"] = selectedElement.value;*/
     return formData;
 }
 function insertNewRecord(data) {
     var table = document.getElementById("List").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
+    var cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.fullName;
     console.log(typeof(cell1));
-    cell2 = newRow.insertCell(1);
+    var cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.age;
-    cell3 = newRow.insertCell(2);
+    var cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.gender;
-    cell4 = newRow.insertCell(3);
+    var cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.myhobby;
     cell4 = newRow.insertCell(4);
     cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button>
@@ -65,7 +63,7 @@ function updateRecord(formData) {
 }
 function onDelete(td) {
     if (confirm('Conformation to delete this record ?')) {
-        row = td.parentElement.parentElement;
+        var row = td.parentElement.parentElement;
         document.getElementById("List").deleteRow(row.rowIndex);
         resetForm();
     }
