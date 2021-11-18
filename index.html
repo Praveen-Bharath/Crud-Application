@@ -15,8 +15,9 @@
     </head>
     <body>
         <h1>CRUD Operation</h1>
-    <table>
+        <table><caption>Input table</caption>
         <tr>
+            <th scope="col"></th>
             <td>
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
@@ -50,14 +51,14 @@
                 </form>
             </td>
             <td>
-                <table class="list" id="List">
+                <table class="list" id="List"><caption>Details Table</caption>
                     <thead>
                         <tr>
-                            <th>Full Name</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>Hobby</th>
-                            <th></th>
+                            <th scope="row">Full Name</th>
+                            <th scope="row">Age</th>
+                            <th scope="row">Gender</th>
+                            <th scope="row">Hobby</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
