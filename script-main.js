@@ -37,9 +37,9 @@ function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("age").value = "";
     var eras=document.getElementsByClassName("gender");
-    for(var i=0;i<eras.length;i++) 
+    for(let gen of eras) 
     {
-        eras[i].checked=false;
+       gen.checked=false;
     }
     document.getElementById("myhobby").value = "";
     selectedRow = null;
@@ -81,7 +81,6 @@ function validate() {
     }
     var e = document.getElementById("myhobby");
     var strUser = e.options[e.selectedIndex].value;
-    var strUser1 = e.options[e.selectedIndex].text;
     if(strUser==0)
     {
         alert("Please select a hobby");
